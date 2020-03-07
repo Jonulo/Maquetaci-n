@@ -206,7 +206,8 @@ main .footer-info .footer-info-sidebar{
 
 .footer-info .footer-sidebar-content{
     display: flex;
-    margin: 30px 0;
+    margin: 30px auto;
+    max-width: 70%;
 }
 
 .footer-info .footer-sidebar-content .footer-sidebar-content-img{
