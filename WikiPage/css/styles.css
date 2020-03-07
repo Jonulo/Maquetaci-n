@@ -1,0 +1,299 @@
+body{
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    font-family: -apple-system,BlinkMacSystemFont,
+                'Segoe UI',Roboto,Lato,'Helvetica Neue',
+                Helvetica,Arial,sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #3366cc;
+}
+/* ---------Header*/
+header{    
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+header p{
+    margin: 0;
+}
+/* ---------Main*/
+main{
+    text-align: center;
+}
+
+main .languages-section{
+    position: relative; /* importante para manejar la clase languages con absolute*/
+    padding: 50px 0;
+}
+
+main .languages{
+    position: absolute;
+}
+
+main .languages a{
+    text-decoration: none;
+}
+
+main .languages a small{
+    color: #54595d;
+    line-height: 1.6; 
+}
+/* --------- posisciones especificas*/
+.lang1{
+    right: 55%;
+    top: 0;
+}
+
+.lang2{
+    right: 60%;
+    top: 20%;
+}
+
+.lang3{
+    right: 62%;
+    top: 40%;
+}
+
+.lang4{
+    right: 60%;
+    top: 60%;
+}
+
+.lang5{
+    right: 55%;
+    top: 80%;
+}
+
+.lang6{
+    left: 55%;
+    top: 0;
+}
+
+.lang7{
+    left: 60%;
+    top: 20%;
+}
+
+.lang8{
+    left: 62%;
+    top: 40%;
+}
+
+.lang9{
+    left: 60%;
+    top: 60%;
+}
+
+.lang10{
+    left: 55%;
+    top: 80%;
+}
+
+/* -------------Search section*/
+
+main .search-section{
+    width: 100%;
+}
+
+main .search-section .inputSearch{
+    width: 450px;
+    border: 1px solid #a2a9b1;
+    margin: auto;
+    text-align: left;
+    border-radius: 2px;
+}
+
+main .search-section .inputSearch:hover{
+    border-color: #72777d;
+}
+
+main .search-section .inputSearch form{
+    display: flex;
+}
+
+main .search-section input{
+    width: 70%;
+    height: 40px;
+    border: none;
+    padding: 0;
+    outline: none;
+    padding-left: 20px;
+}
+
+main .search-section input:focus{
+    border-color: #36c;
+    box-shadow: inset 0 0 0 1px #36c;
+}
+
+main .search-section .select-language{
+    display: flex;
+    width: 20%;
+    text-align: center;
+    align-items: center;
+}
+
+main .search-section .select-language select{
+    border: none;
+    padding: 0;
+    margin: auto;
+    outline: none;
+}
+
+main .search-section select option{
+    border: none;
+    padding: 0;
+}
+
+main .search-section button{
+    width: 10%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: #36c;
+}
+
+main .search-section button:hover{
+    background-color: #447ff5;
+    border-color: #447ff5;
+}
+/*------------- Read wiki section*/
+main .read-wiki{
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+main .read-wiki .hr{
+    width: 100px;
+    padding: 10px 10px;
+    color: #c8ccd1;
+}
+
+hr{
+    opacity: 0.5;
+}
+
+main .read-wiki button{
+    width: 300px;
+    height: 35px;
+    border: 1px solid #a2a9b1;
+    color: #36c;
+    cursor: pointer;
+    background-color: #f8f9fa;
+}
+
+main .read-wiki button span{
+    color: rgb(51, 102, 204);
+}
+/*----------- Info Section*/
+main .footer-info{
+    display: flex;
+    padding: 30px 10px;
+}
+
+main .footer-info .footer-info-sidebar{
+    width: 35%;
+    color: #54595d;
+    font-size: 13px;
+    text-size-adjust: 100%;
+    text-align: left;
+}
+
+.footer-info .footer-sidebar-content{
+    display: flex;
+    margin: 30px 0;
+}
+
+.footer-info .footer-sidebar-content .footer-sidebar-content-img{
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.img1{
+    background-image: url(../assets/foundation-img.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.img2{
+    background-image: url(../assets/logo2.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-sidebar-content .footer-siderbar-content-text{
+    margin: auto;
+}
+
+.footer-info ul{
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-info ul li{
+    list-style: none;
+}
+.googleStore{
+    width: 130px;
+    height: 40px;
+    background-image: url(../assets/googleplay.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.appleStore{
+    width: 130px;
+    height: 40px;
+    background-image: url(../assets/appstore.png);
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*--------- Footer projects section*/
+.footer-info .footer-info-projects{
+    width: 65%;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    padding: 20px;
+}
+
+.footer-info-projects .project-box{
+    display: flex;
+    font-size: small;
+    height: 100px;
+}
+
+.footer-info-projects .project-box a {
+    text-align: left;
+    display: flex;
+}
+
+.footer-info-projects .project-box a .project-box-img{
+    height: auto;
+    vertical-align: middle;
+}
+
+.footer-info-projects .project-box a .project-box-desc{
+    height: auto;
+    color: #54595d;
+}
+
+.footer-info-projects .project-box a span{
+    font-size: 14px;
+}
+
+.footer-info-projects .project-box a .text-desc{
+    font-size: 12px;
+}

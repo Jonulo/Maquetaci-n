@@ -1,0 +1,182 @@
+* {
+
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    background: white;
+    font-family: arial,sans-serif;
+    font-size: small;
+}
+
+a {
+    text-decoration: none; /* quitar raya inferior de todas estas etiquetas y demás decoración*/
+    cursor: pointer;
+}
+
+/* --------------Header Section */
+header {
+    width: 100%;
+    height: 60px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end; /*mandar el contenido a donde se quiera, **requiere de display FLEX** */
+}
+
+header nav .nav-right-section {
+    width: 250px;
+    height: auto; /* auto para que tome de forma automatica la altura del padre ya definida */
+    display: flex;
+    list-style: none; /* Quitar los estilos predefinidos de las listas*/
+    justify-content: center; /* centrar los elementos gracias a FLEX */
+    align-items: center; /* Alinear cada uno de los elementos en horizontal */
+}
+
+nav .nav-right-section a {
+    margin-right: 10px;
+    color: #000000;
+}
+
+nav .nav-right-section .menu-icon{
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat; /* Si la imagen es muy grande o pequeña no se repita para rellenar espacio en blanco*/
+    background-position: center; /* la imagen al centro del <li> */
+    background-size: contain; /* para que se aproxime al tamaño del contenedor */
+    width: 25px;
+    height: 25px;
+}
+
+nav .nav-right-section img {
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* --------------Main Section */
+
+main {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.main-logo { /* manejando display block (es el que viene por defecto) */
+    width: 530px;
+    margin: 0 auto; /* Auto es que divide el espacio que 'sobra' /2 */ 
+}
+
+main .main-logo img {
+    width: 550px;
+}
+/* sección del input*/
+main .main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+/* div que aparenta ser un input completo*/
+main .main-input-container {
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #e7e9ec;
+    display: flex; /* Colocar los elementos de forma lineal */
+    justify-content: center;
+    align-items: center;
+}
+main .main-input-container input {
+    width: 450px;
+    height: 40px; /* desde el input definimos la altura de todo el elemento div que aparenta un input*/
+    border: none;
+    outline: none;
+}
+main .main-input-container:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+main .main-input .search-icon {
+    background-image: url('https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-icono-de-b-squeda-by-vexels.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+main .main-input .micro-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e8/Google_mic.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+/* --------------Botones de búsqueda */
+
+main .main-buttons{
+    width: 530px;
+    margin: 0 auto;
+}
+
+main .main-buttons div{
+    display: inline-block;
+
+}
+
+main .main-buttons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border: none;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+}
+main .main-buttons button:hover{
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #c1c1c4;
+    cursor: pointer;
+    color: #222;
+}
+/* --------------Footer section */
+
+footer {
+    width: 100%;
+    height: 50px;
+    position: absolute; /* para que el footer siempre este hasta abajo*/
+    bottom: 0;
+    background: #f2f2f2;
+    display: grid; /*Alternativa a flex usando sistema de grillas (12)*/
+    grid-template-columns: 1fr 1fr; /* la cuadrícula dividida en 2 fracciones*/
+    align-items: center;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+footer ul li{
+    margin: 0 10px;
+}
+
+footer .footer-left{
+    justify-self: left;
+}
+
+footer .footer-right{
+    justify-self: right;
+}
+
+footer ul li a{
+    color: #5f6368;
+}
+
+footer ul li a:hover{
+    border-bottom: 1px solid #5f6368;
+}
