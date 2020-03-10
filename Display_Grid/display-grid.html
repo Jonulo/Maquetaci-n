@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisplayGrid</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            /* # Inicializamos el sistema de rejillas */
+            display: grid;
+
+            /* # Iniciamos el grid en columnas con valores determinados,
+               # son aceptados la mayoria de unidades de medida */
+            /*grid-template-columns: 25% 200px 25%;*/
+
+            /* # Solo controlamos las medidas de el numero de filas
+               # que pongamos como parametros. */
+            /*grid-template-rows: 200px 100px;*/
+
+            /* # Forma resumida de escribir las filas y las columnas
+               # en una sola línea: 
+                grid-template: FILAS / COLUMNAS;*/
+            grid-template: 300px 100px 100px / 50% 200px 100px;
+            
+            /* # GAP es usado para dar espacio entre elementos dentro 
+               # de el display grid, su finalidad es parecida a margin
+               # pero con GAP no modificamos el tamaño de las rejillas 
+               # gap: FILAS COLUMNAS */
+            /* column-gap: 20px; */
+            /* row-gap: 20px; */
+            gap: 20px 20px;
+
+            /* # Unidad de mediad especial para GRID fr(fracciones)*/
+            grid-template: 300px 100px 100px / 1fr 1fr 1fr;
+            /* # función css para que el grid se escriba mejor 
+               # y definamos las medidas max y mínimas de la rejilla
+               #  Sintaxis aceptada -> :minmax(200px, 1fr) 1 fr 1fr */
+            grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
+        }
+        .item{
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid red;
+        }
+        .item:nth-of-type(4){ /* tomamos el elemento # de esa CLASE de elementos*/
+            background-color: purple;
+            overflow: auto;
+            /* # funcionalidad que hereda todas las propiedades del padre pero sin implementar
+            display: subgrid; */
+            display: grid;
+            grid-template: 50px 50px 50px / 200px 200px 200px;
+        }
+        .item .item{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">contenido #1</div>
+        <div class="item">contenido #2</div>
+        <div class="item">contenido #3</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+        </div>
+        <div class="item">contenido #5</div>
+        <div class="item">contenido #6</div>
+        <div class="item">contenido #7</div>
+        <div class="item">contenido #8</div>
+        <div class="item">contenido #9</div>
+        <div class="item">contenido #10</div>
+        <div class="item">contenido #11</div>
+        <div class="item">contenido #12</div>
+    </section>
+</body>
+</html>

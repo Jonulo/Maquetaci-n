@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridAreas</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template: 100px 1fr 150px / 200px 1fr;
+            gap: 10px;
+            height: 100vh;
+            /* # Definimos el nombre y la posisción de las áreas */
+            grid-template-areas: "header header"
+                                 "left contenido"
+                                 "footer footer";
+        }
+        .item{
+            background-color: darkblue;
+            border: 1px solid aqua;
+            padding: 10px;
+            color: white;
+        }
+        .header{
+            /* # Propiedad aplicada a los HIJOS de un grid container
+               # y la usaremos para diferenciar estéticamente las
+               # diferentes secciones de la página */
+            grid-area: header; /* # Como lo nombramos en el tgrid template del padre */
+        }
+        .left{
+            grid-area: left;
+        }
+        .contenido{
+            grid-area: contenido;
+        }
+        .footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">HEADER</div>
+        <div class="item left">LEFT</div>
+        <div class="item contenido">CONTENIDO</div>
+        <div class="item footer">FOOTER</div>
+    </div>    
+</body>
+</html>
