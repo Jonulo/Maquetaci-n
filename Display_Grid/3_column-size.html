@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Size</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+            height: 100vh;
+            gap: 10px;
+        }
+        .item{
+            background-color: green;
+            border: 1px solid black;
+        }
+        .item:nth-of-type(1){
+            background-color: indianred;
+            /* # (NEW) para indicar las rejillas que
+               # queremos que ocupe nuestro item contamos
+               # por COLUMNAS y decimos que empiece de la 
+               # linea 1 a la 3 (linea es el primer lado
+               #  de la caja de izq a derecha de cada item)*/
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .item:nth-of-type(7){
+            /* # Forma abreviada de escribirlo */
+            grid-column: 3 / 4;
+        }
+        .item:nth-of-type(8){
+            background-color: indigo;
+            /* # Esto para que ocupe 2 lineas sin 
+               # saber el total de columnas que tengo*/
+            grid-column: 2 / span 2;
+            /* # Esto para que ocupe todas las columnas
+               # disponibles sin saber el total */
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">contenido 1</div>
+        <div class="item">contenido 2</div>
+        <div class="item">contenido 3</div>
+        <div class="item">contenido 4</div>
+        <div class="item">contenido 5</div>
+        <div class="item">contenido 6</div>
+        <div class="item">contenido 7</div>
+        <div class="item">contenido 8</div>
+        <div class="item">contenido 9</div>
+        <div class="item">contenido 10</div>
+        <div class="item">contenido 11</div>
+        <div class="item">contenido 12</div>
+    </div>
+</body>
+</html>
