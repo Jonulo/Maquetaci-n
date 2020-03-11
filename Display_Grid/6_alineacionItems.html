@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Size</title>
+    <style>
+        /* En esta clase aprendemos a pososcionar los elemenos DENTRO de las rejillas*/
+        .container{
+            display: grid;
+            grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+            height: 100vh;
+            gap: 5px;
+            /*
+                # Alineado horizontal
+                # valores start end center y stretch
+                # stretch estira el contenido a el valor
+                # que tengamos en grid-template esta por defecto
+                # ahora el "item" tiene su propio tamaño dentro
+                # de cada rejilla.
+            */
+            justify-items: center;
+            /*
+                # Alineado Vertical
+                # lo mismo de arriba
+            */
+            align-items: center;
+        }
+        .item{
+            background-color: green;
+            border: 1px solid black;
+            color: white;
+        }
+        .item:nth-of-type(5){
+            align-self: start;
+            justify-self: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"> item #1</div>
+        <div class="item"> item #2</div>
+        <div class="item"> item #3</div>
+        <div class="item"> item #4</div>
+        <div class="item"> item #5</div>
+        <div class="item"> item #6</div>
+        <div class="item"> item #7</div>
+        <div class="item"> item #8</div>
+        <div class="item"> item #9</div>
+        <div class="item"> item #10</div>
+        <div class="item"> item #11</div>
+        <div class="item"> item #12</div>
+    </div>
+</body>
+</html>
