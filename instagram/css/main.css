@@ -1,0 +1,215 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #4e4e4e;
+}
+hr{
+    width: 50%;;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+}
+header .container{
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%; /**/
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    gap: 5px;
+}
+header .header-item{
+    align-self: center;
+    padding-top: 5px;
+}
+header .header-item:nth-of-type(1){
+    justify-self: end;
+}
+header .header-item:nth-of-type(2){
+    justify-self: center;
+}
+header .header-item:nth-of-type(3){
+    justify-self: stretch;
+    display: grid;
+    grid-template: 1fr / repeat(4, 40px);
+    grid-auto-flow: column;
+    
+}
+header .search-button{ /* faltan detalles con crear el input */
+    background-color: #fafafa;
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    color: #a5a7aa;
+}
+header input{
+    background-color: #fafafa;
+    border: none;
+    outline: none;
+    color: #a5a7aa;
+}
+header .menu-items:nth-of-type(4){
+    background-image: url('https://lh3.googleusercontent.com/-wrrdu7vNZ0A/AAAAAAAAAAI/AAAAAAAAAAA/AKF05nDsUokYRNJuVAX5CjLiuodtf1XIBw.CMID/s32-c/photo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+/* ----------------Info Section */
+.info{
+    display: grid;
+    grid-template: 200px 100px / repeat(3, 300px);
+    justify-content: center;
+    margin: 50px 0;
+}
+.info-picture{
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgba(228, 221, 221, 0.678);
+    border-spacing: 5px;
+    overflow: hidden;
+    justify-self: center;
+    align-self: start;
+}
+.info-picture img{
+    width: 100%;
+    height: 100%;
+}
+.info-details{
+    grid-column: 2 / 4;
+    padding: 5px 10px;
+}
+.info-details-header{
+    color: #575757;
+    font-size: 25px;
+}
+.info-details-header button{
+    background-color: #fafafa;
+    padding: 5px;
+    font-weight: bold;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+.info-details-header button:hover{
+    cursor: pointer;
+}
+.info-details-numbers{
+    color: #535353;
+    margin: 20px 0;
+}
+.info-details-numbers span{
+    cursor: pointer;
+}
+.info-details-numbers span:nth-of-type(2){
+    margin: 0 25px;
+}
+.details-extra-items{
+    display: block;
+    margin: 10px 0;
+}
+.details-extra-items:nth-of-type(1){
+    font-weight: bold;
+}
+.info-histories{
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    align-self: center;
+}
+.info-histories .histories-container{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid rgba(228, 221, 221, 0.678);
+    border-spacing: 5px;
+    margin-right: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.histories-container img{
+    width: 100%;
+    height: 100%;
+}
+/* ----------------Items Menu */
+.items-menu{
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    justify-content: center;
+    justify-items: center;
+}
+.items-menu span{
+    color: #a2a2a2;
+    cursor: pointer;
+}
+.items-menu span:nth-of-type(1){
+    color: black;
+    font-weight: inherit;
+}
+/* ----------------Post List */
+.post-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    gap: 28px;
+    margin: 50px 0;
+ }
+.post{
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+.post-image{
+    margin: 0;
+}
+.post-image img{
+    width: 100%;
+    vertical-align: top;
+}
+.post-overlay{
+    background-color: rgba(0,0,0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.post:hover .post-overlay{
+    display: flex;
+}
+.post-likes, .post-comments{
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+/* ------------ Responsive */
+@media screen and ( max-width: 768px){
+    .post-list{
+        gap: 3px;
+    }
+    .info-histories{
+        justify-self: center;
+    }
+    .info-histories .histories-container{
+        width: 50px;
+        height: 50px;
+        border-spacing: 5px;
+        margin-right: 10px;
+    }
+}
