@@ -28,6 +28,9 @@ header .header-item{
     align-self: center;
     padding-top: 5px;
 }
+header .header-item a{
+    align-self: start;
+}
 header .header-item:nth-of-type(1){
     justify-self: end;
 }
