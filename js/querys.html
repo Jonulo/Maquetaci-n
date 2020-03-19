@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .menu{
+            background-color: purple;
+            width: 50vw;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: -50vw;
+            transition: .3s;
+        }
+        .menu.is-active{
+            left:0;
+        }
+        .menu ul{
+            list-style: none;
+            display: flex;
+            flex-direction: none;
+        }
+        .menu li{
+            color: white;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        button{
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <button>
+        <svg width="24" height="24" viewBox="0 0 24 24" id="active-button"> 
+            <path d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" /> 
+        </svg>
+    </button>
+    <div class="menu"> <!-- .is-active -->
+        <ul>
+            <li>Option1</li>
+            <li>Option2</li>
+            <li>Option3</li>
+        </ul>
+    </div>
+    <script>
+        const menu = document.querySelector('.menu');
+        const queryIpad = window.matchMedia('screen and (max-width: 767px)');
+        const button = document.querySelector('#active-button');
+
+        queryIpad.addListener(validationListener);
+
+        function validationListener(event){
+        if(event.matches){
+            console.log(event.matches);
+            button.addEventListener('click',funcion);    
+        }else{
+            button.removeEventListener('click',funcion);
+        }
+        }
+
+        function funcion (){
+        if(menu.classList.contains('is-active')){
+            menu.classList.remove('is-active'); 
+        }else{
+            menu.classList.add('is-active');  
+        }
+        }
+    </script>
+</body>
+</html>

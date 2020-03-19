@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;   
+}
+.first-section{
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(148, 48, 140);
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.first-section .aboutme{
+    padding: 5px 5px;
+    justify-self: start;
+    align-self: center;
+}
+.first-section .Mypicture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    justify-self: end;
+    align-self: center;
+    border: 3px solid #f6f6f6;
+}
+.Mypicture img{
+    width: 100%;
+    height: auto;
+}
